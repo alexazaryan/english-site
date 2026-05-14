@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+
+   <body>
+      <header>
+         <span class="logo">
+            <img src="img/imgEN.png" alt="logo" />
+         </span>
+         <div class="header-right">
+            <nav id="nav">
+               <a class="active" data-section="hero" data-key="nav_home"></a>
+               <a data-section="about" data-key="nav_about"></a>
+               <a data-section="services" data-key="nav_services"></a>
+               <a data-section="reviews" data-key="nav_reviews"></a>
+               <a data-section="contact" data-key="nav_contact"></a>
+            </nav>
+
+            <div class="lang-switch" id="langSwitch">
+               <button class="lang-btn active" id="langMain">УКР ▼</button>
+
+               <div class="lang-dropdown" id="langDropdown">
+                  <button class="lang-item" data-lang="uk">УКР</button>
+                  <button class="lang-item" data-lang="ru">РУС</button>
+                  <button class="lang-item" data-lang="en">ENG</button>
+               </div>
+            </div>
+         </div>
+         <button class="burger" id="burger">☰</button>
+      </header>
+
+      <div class="mobile-menu" id="mobile-menu">
+         <a class="active" data-section="hero" data-key="nav_home"></a>
+         <a data-section="about" data-key="nav_about"></a>
+         <a data-section="services" data-key="nav_services"></a>
+         <a data-section="reviews" data-key="nav_reviews"></a>
+         <a data-section="contact" data-key="nav_contact"></a>
+         <div class="lang-row">
+            <button class="lang-btn active" data-lang="uk">УКР</button>
+            <button class="lang-btn" data-lang="ru">РУС</button>
+            <button class="lang-btn" data-lang="en">ENG</button>
+         </div>
+      </div>
+
+      <section id="hero">
+         <div class="hero-badge" data-key="badge"></div>
+         <h1 data-key="hero_title"></h1>
+         <p data-key="hero_sub"></p>
+         <!-- <button class="btn" data-key="hero_btn"></button> -->
+          <a class="btn" data-section="contact" data-key="hero_btn"></a>
+      </section>
+
+      <section id="about">
+         <img src="./img/foto.png" alt="English Teacher" class="avatar" />
+
+         <div>
+            <h2 data-key="nav_about"></h2>
+
+            <p data-key="about_text_1"></p>
+
+            <p data-key="about_text_2"></p>
+
+            <p data-key="about_text_3"></p>
+
+            <p data-key="about_text_4"></p>
+         </div>
+      </section>
+
+      <section id="services">
+         <h2 data-key="nav_services"></h2>
+
+         <div class="cards">
+            <div class="card">
+               <div class="card-icon">👤</div>
+               <h3 data-key="s1_title"></h3>
+               <p data-key="s1_text"></p>
+            </div>
+            <div class="card">
+               <div class="card-icon">👥</div>
+               <h3 data-key="s2_title"></h3>
+               <p data-key="s2_text"></p>
+            </div>
+            <div class="card">
+               <div class="card-icon">📜</div>
+               <h3 data-key="s3_title"></h3>
+               <p data-key="s3_text"></p>
+            </div>
+            <div class="card">
+               <div class="card-icon">🧒</div>
+               <h3 data-key="s4_title"></h3>
+               <p data-key="s4_text"></p>
+            </div>
+            <div class="card">
+               <div class="card-icon">💼</div>
+               <h3 data-key="s5_title"></h3>
+               <p data-key="s5_text"></p>
+            </div>
+            <div class="card">
+               <div class="card-icon">✈️</div>
+               <h3 data-key="s6_title"></h3>
+               <p data-key="s6_text"></p>
+            </div>
+         </div>
+      </section>
+
+      <section id="reviews">
+         <h2 data-key="nav_reviews"></h2>
+         <div class="slider-wrap">
+            <div class="slider-track" id="track">
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r1_text"></p>
+                  <div class="reviewer" data-key="r1_name"></div>
+               </div>
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r2_text"></p>
+                  <div class="reviewer" data-key="r2_name"></div>
+               </div>
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r3_text"></p>
+                  <div class="reviewer" data-key="r3_name"></div>
+               </div>
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r4_text"></p>
+                  <div class="reviewer" data-key="r4_name"></div>
+               </div>
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r5_text"></p>
+                  <div class="reviewer" data-key="r5_name"></div>
+               </div>
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r6_text"></p>
+                  <div class="reviewer" data-key="r6_name"></div>
+               </div>
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r7_text"></p>
+                  <div class="reviewer" data-key="r7_name"></div>
+               </div>
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r8_text"></p>
+                  <div class="reviewer" data-key="r8_name"></div>
+               </div>
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r9_text"></p>
+                  <div class="reviewer" data-key="r9_name"></div>
+               </div>
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r10_text"></p>
+                  <div class="reviewer" data-key="r10_name"></div>
+               </div>
+
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r4_text"></p>
+                  <div class="reviewer" data-key="r4_name"></div>
+               </div>
+               <div class="review-card">
+                  <div class="stars">★★★★★</div>
+                  <p data-key="r5_text"></p>
+                  <div class="reviewer" data-key="r5_name"></div>
+               </div>
+            </div>
+         </div>
+         <div class="slider-controls">
+            <button class="sl-btn" id="prev">‹</button>
+            <div class="dots" id="dots"></div>
+            <button class="sl-btn" id="next">›</button>
+         </div>
+      </section>
+
+      <section id="contact">
+         <h2 data-key="contact_title"></h2>
+         <p data-key="contact_sub"></p>
+
+         <div class="contact-links">
+            <!-- viber -->
+            <a class="contact-link" href="viber://chat?number=%2B380930266041">
+               <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                     d="M12 2a10 10 0 00-8.64 15.05L2 22l5.15-1.35A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.13l-.29-.17-3.06.8.82-2.98-.2-.31A8 8 0 1112 20zm4.36-5.64c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.39.12-.13.16-.22.24-.36.08-.14.04-.27-.02-.39-.06-.12-.54-1.3-.74-1.77-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.33.98 2.5c.12.16 1.68 2.57 4.1 3.6.58.25 1.03.4 1.38.51.58.18 1.1.15 1.52.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"
+                  />
+               </svg>
+               Viber
+            </a>
+
+            <!-- telegram -->
+            <a class="contact-link" href="tg://resolve?phone=380930266041">
+               <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                     d="M9.04 15.47l-.39 5.52c.56 0 .8-.24 1.1-.54l2.62-2.5 5.43 3.98c.99.55 1.7.26 1.96-.92l3.54-16.57h.01c.31-1.45-.52-2.02-1.48-1.66L1.67 9.1c-1.42.55-1.4 1.35-.24 1.71l5.64 1.76 13.08-8.23c.62-.39 1.18-.18.71.21"
+                  />
+               </svg>
+               Telegram
+            </a>
+
+            <!-- WhatsApp -->
+            <a class="contact-link">
+               <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                     d="M12 2a10 10 0 00-8.64 15.05L2 22l5.15-1.35A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.13l-.29-.17-3.06.8.82-2.98-.2-.31A8 8 0 1112 20zm4.36-5.64c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.39.12-.13.16-.22.24-.36.08-.14.04-.27-.02-.39-.06-.12-.54-1.3-.74-1.77-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.33.98 2.5c.12.16 1.68 2.57 4.1 3.6.58.25 1.03.4 1.38.51.58.18 1.1.15 1.52.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"
+                  />
+               </svg>
+               WhatsApp
+            </a>
+         </div>
+      </section>
+
+      <footer><span data-key="footer"></span></footer>
+      <button class="scroll-top" id="scrollTop">↑</button>
+
+      <script src="script.js"></script>
+   </body>
+</html>
