@@ -165,8 +165,8 @@ nav a.active {
    background: #fff;
    border-bottom: 1px solid #e5e7eb;
 
-   position: fixed; /* фиксируем */
-   top: 64px; /* ниже header */
+   position: fixed;
+   top: 64px;
    left: 0; /* от левого края */
    width: 100%;
    z-index: 999;
@@ -194,8 +194,8 @@ nav a.active {
 #hero {
    background: #1a3a6b;
    width: 100%;
-   min-height: 100vh;
-
+   /* min-height: 100vh; */
+   min-height: 100svh;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -205,14 +205,6 @@ nav a.active {
    padding: 2rem;
    box-sizing: border-box;
 }
-/* #hero {
-   background: #1a3a6b;
-   width: 100%;
-   min-height: 100vh;
-   padding: 5rem 2rem;
-   text-align: center;
-   box-sizing: border-box;
-} */
 
 .hero-badge {
    display: inline-block;
