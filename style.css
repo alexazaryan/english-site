@@ -18,7 +18,7 @@ body {
    padding: 0;
 }
 
-header {
+/* header {
    background: #fff;
    border-bottom: 1px solid #e5e7eb;
    padding: 0 2rem;
@@ -29,8 +29,22 @@ header {
    position: sticky;
    top: 0;
    z-index: 99999;
+} */
+header {
+   background: #fff;
+   border-bottom: 1px solid #e5e7eb;
+   padding: 0 2rem;
+   height: 64px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: fixed;
+   top: 0;
+   left: 0; /* добавляем */
+   right: 0; /* или width: 100% */
+   width: 100%; /* один из вариантов */
+   z-index: 99999;
 }
-
 .logo {
    position: relative;
    display: flex;
@@ -165,7 +179,7 @@ nav a.active {
    background: #fff;
    border-bottom: 1px solid #e5e7eb;
 
-   position: fixed;
+   position: fixed; /* фиксируем */
    top: 64px;
    left: 0; /* от левого края */
    width: 100%;
