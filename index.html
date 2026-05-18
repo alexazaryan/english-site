@@ -1,226 +1,662 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
    <head>
-      <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Elena - English Teacher</title>
-      <link rel="icon" type="image/png" href="./img/imgEN.png" />
+      <link rel="icon" type="image/png" href="./img/favicon.png" />
       <link rel="stylesheet" href="style.css" />
    </head>
 
    <body>
-      <header>
-         <span class="logo">
-            <img src="img/imgEN.png" alt="logo" />
-         </span>
-         <div class="header-right">
-            <nav id="nav">
-               <a class="active" data-section="hero" data-key="nav_home"></a>
-               <a data-section="about" data-key="nav_about"></a>
-               <a data-section="services" data-key="nav_services"></a>
-               <a data-section="reviews" data-key="nav_reviews"></a>
-               <a data-section="contact" data-key="nav_contact"></a>
-            </nav>
+      <div class="cursor" id="cursor"></div>
+      <div class="cursor-ring" id="cursorRing"></div>
+      <div class="bg-grid"></div>
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
 
-            <div class="lang-switch" id="langSwitch">
-               <button class="lang-btn active" id="langMain">УКР ▼</button>
-
-               <div class="lang-dropdown" id="langDropdown">
-                  <button class="lang-item" data-lang="uk">УКР</button>
-                  <button class="lang-item" data-lang="ru">РУС</button>
-                  <button class="lang-item" data-lang="en">ENG</button>
-               </div>
-            </div>
-         </div>
-         <button class="burger" id="burger">☰</button>
-      </header>
-
-      <div class="mobile-menu" id="mobile-menu">
-         <a class="active" data-section="hero" data-key="nav_home"></a>
-         <a data-section="about" data-key="nav_about"></a>
-         <a data-section="services" data-key="nav_services"></a>
-         <a data-section="reviews" data-key="nav_reviews"></a>
-         <a data-section="contact" data-key="nav_contact"></a>
-         <div class="lang-row">
-            <button class="lang-btn active" data-lang="uk">УКР</button>
-            <button class="lang-btn" data-lang="ru">РУС</button>
-            <button class="lang-btn" data-lang="en">ENG</button>
+      <!-- MOBILE NAV -->
+      <div class="mobile-nav" id="mobileNav">
+         <a href="#about" onclick="closeMobile()" data-i18n="nav_about"
+            >Про мене</a
+         >
+         <a href="#services" onclick="closeMobile()" data-i18n="nav_services"
+            >Послуги</a
+         >
+         <a href="#reviews" onclick="closeMobile()" data-i18n="nav_reviews"
+            >Відгуки</a
+         >
+         <a href="#contact" onclick="closeMobile()" data-i18n="nav_contact"
+            >Контакти</a
+         >
+         <div class="mobile-lang-row">
+            <button class="mobile-lang-btn active" data-lang="uk">УКР</button>
+            <button class="mobile-lang-btn" data-lang="ru">РУС</button>
+            <button class="mobile-lang-btn" data-lang="en">ENG</button>
          </div>
       </div>
 
-      <section id="hero">
-         <div class="hero-badge" data-key="badge"></div>
-         <h1 data-key="hero_title"></h1>
-         <p data-key="hero_sub"></p>
-         <!-- <button class="btn" data-key="hero_btn"></button> -->
-         <a class="btn" data-section="contact" data-key="hero_btn"></a>
+      <!-- NAV -->
+      <nav>
+         <div class="container">
+            <a href="#hero" class="nav-logo"
+               >Elena
+               <span style="font-weight: 400; opacity: 0.6">✦</span> English</a
+            >
+            <ul class="nav-links">
+               <li><a href="#about" data-i18n="nav_about">Про мене</a></li>
+               <li><a href="#services" data-i18n="nav_services">Послуги</a></li>
+               <li><a href="#reviews" data-i18n="nav_reviews">Відгуки</a></li>
+               <li>
+                  <a href="#contact" class="nav-cta" data-i18n="nav_contact"
+                     >Контакти</a
+                  >
+               </li>
+            </ul>
+            <div class="nav-right">
+               <div class="lang-switch">
+                  <button class="lang-btn-main" id="langMainBtn">УКР ▾</button>
+                  <div class="lang-dropdown" id="langDropdown">
+                     <button class="lang-opt active" data-lang="uk">УКР</button>
+                     <button class="lang-opt" data-lang="ru">РУС</button>
+                     <button class="lang-opt" data-lang="en">ENG</button>
+                  </div>
+               </div>
+               <button
+                  class="theme-toggle"
+                  id="themeToggle"
+                  title="Toggle theme"
+               >
+                  🌙
+               </button>
+               <button
+                  class="hamburger"
+                  id="hamburger"
+                  onclick="toggleMobile()"
+               >
+                  <span></span><span></span><span></span>
+               </button>
+            </div>
+         </div>
+      </nav>
+
+      <!-- HERO -->
+      <section id="hero" class="hero">
+         <div class="container">
+            <div class="hero-inner">
+               <div>
+                  <div class="hero-badge">
+                     <div class="badge-dot"></div>
+                     <span data-i18n="badge">Репетитор англійської мови</span>
+                  </div>
+                  <h1>
+                     <span data-i18n="hero_line1">Вчимо англійську</span>
+                     <span class="gradient-text" data-i18n="hero_line2"
+                        >легко і з</span
+                     >
+                     <span data-i18n="hero_line3">задоволенням</span>
+                  </h1>
+                  <p data-i18n="hero_sub">
+                     Онлайн та офлайн уроки для дітей і дорослих. Індивідуальний
+                     підхід до кожного учня.
+                  </p>
+                  <div class="hero-cta">
+                     <a
+                        href="#contact"
+                        class="btn btn-primary"
+                        data-i18n="hero_btn"
+                        >📚 Записатися на урок</a
+                     >
+                     <a
+                        href="#services"
+                        class="btn btn-outline"
+                        data-i18n="hero_btn2"
+                        >Послуги</a
+                     >
+                  </div>
+               </div>
+               <div class="hero-visual">
+                  <div class="avatar-wrap">
+                     <div class="avatar-ring"></div>
+                     <div class="avatar-ring2"></div>
+                     <!-- <div class="avatar-img" >👩‍🏫</div> -->
+                     <img
+                        src="./img/avatar.png"
+                        alt="Elena"
+                        style="
+                           width: 100%;
+                           height: 100%;
+                           object-fit: cover;
+                           border-radius: 50%;
+                        "
+                     />
+                     <div class="floating-tags">
+                        <div class="tag" data-i18n="tag1">
+                           10+ років досвіду ✨
+                        </div>
+                        <div class="tag" data-i18n="tag2">IELTS / TOEFL 📜</div>
+                        <div class="tag" data-i18n="tag3">
+                           Онлайн & офлайн 💻
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </section>
 
+      <!-- TICKER -->
+      <div class="ticker-wrap">
+         <div class="ticker" id="tickerTrack">
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t1">Індивідуальні уроки</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span> <span data-i18n="t2">Групові заняття</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t3">Підготовка до IELTS</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t4">Діти від 5 років</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t5">Ділова англійська</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t6">Перший урок безкоштовно</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span> <span data-i18n="t7">Онлайн & офлайн</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t8">10+ років досвіду</span></span
+            >
+            <!-- duplicate for loop -->
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t1">Індивідуальні уроки</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span> <span data-i18n="t2">Групові заняття</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t3">Підготовка до IELTS</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t4">Діти від 5 років</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t5">Ділова англійська</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t6">Перший урок безкоштовно</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span> <span data-i18n="t7">Онлайн & офлайн</span></span
+            >
+            <span class="ticker-item"
+               ><span>✦</span>
+               <span data-i18n="t8">10+ років досвіду</span></span
+            >
+         </div>
+      </div>
+
+      <!-- STATS -->
+      <section>
+         <div class="container">
+            <div class="stats-row reveal">
+               <div class="stat">
+                  <div class="stat-num" data-count="10">0</div>
+                  <p data-i18n="stat1">Років досвіду</p>
+               </div>
+               <div class="stat">
+                  <div class="stat-num" data-count="200">0</div>
+                  <p data-i18n="stat2">Учнів навчено</p>
+               </div>
+               <div class="stat">
+                  <div class="stat-num" data-count="100">0</div>
+                  <p data-i18n="stat3">% задоволених учнів</p>
+               </div>
+               <div class="stat">
+                  <div class="stat-num" data-count="1">0</div>
+                  <p data-i18n="stat4">Перший урок — безкоштовно</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ABOUT -->
       <section id="about">
-         <img src="./img/foto.png" alt="English Teacher" class="avatar" />
-
-         <div>
-            <h2 data-key="nav_about"></h2>
-
-            <p data-key="about_text_1"></p>
-
-            <p data-key="about_text_2"></p>
-
-            <p data-key="about_text_3"></p>
-
-            <p data-key="about_text_4"></p>
+         <div class="container">
+            <div class="about-avatar reveal">
+               <!-- <span>👩‍🏫</span> -->
+               <img
+                  src="./img/aboutAvatar.png"
+                  alt="Elena"
+                  style="
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                     border-radius: 24px;
+                  "
+               />
+            </div>
+            <div class="about-content reveal" style="transition-delay: 0.12s">
+               <div class="section-label" data-i18n="nav_about">Про мене</div>
+               <h2 data-i18n="about_title">Знайомтесь — Елена</h2>
+               <p data-i18n="about_text_1">
+                  Мене звати Елена, я викладач англійської мови з досвідом понад
+                  10 років.
+               </p>
+               <p data-i18n="about_text_2">
+                  За цей час я допомогла багатьом учням покращити знання
+                  англійської, підготуватися до іспитів та подолати мовний
+                  бар'єр.
+               </p>
+               <p data-i18n="about_text_3">
+                  Працюю з дітьми, школярами, студентами та дорослими,
+                  підбираючи індивідуальну програму навчання під кожного учня.
+               </p>
+               <p data-i18n="about_text_4">
+                  Моє головне завдання — зробити англійську зрозумілою,
+                  доступною та корисною у реальному житті.
+               </p>
+            </div>
          </div>
       </section>
 
+      <!-- SERVICES -->
       <section id="services">
-         <h2 data-key="nav_services"></h2>
-
-         <div class="cards">
-            <div class="card">
-               <div class="card-icon">👤</div>
-               <h3 data-key="s1_title"></h3>
-               <p data-key="s1_text"></p>
+         <div class="container">
+            <div class="reveal">
+               <div class="section-label" data-i18n="nav_services">Послуги</div>
+               <h2 class="section-title" data-i18n="services_title">
+                  Що я пропоную
+               </h2>
             </div>
-            <div class="card">
-               <div class="card-icon">👥</div>
-               <h3 data-key="s2_title"></h3>
-               <p data-key="s2_text"></p>
-            </div>
-            <div class="card">
-               <div class="card-icon">📜</div>
-               <h3 data-key="s3_title"></h3>
-               <p data-key="s3_text"></p>
-            </div>
-            <div class="card">
-               <div class="card-icon">🧒</div>
-               <h3 data-key="s4_title"></h3>
-               <p data-key="s4_text"></p>
-            </div>
-            <div class="card">
-               <div class="card-icon">💼</div>
-               <h3 data-key="s5_title"></h3>
-               <p data-key="s5_text"></p>
-            </div>
-            <div class="card">
-               <div class="card-icon">✈️</div>
-               <h3 data-key="s6_title"></h3>
-               <p data-key="s6_text"></p>
+            <div class="services-grid">
+               <div class="service-card reveal">
+                  <div class="service-icon">👤</div>
+                  <h3 data-i18n="s1_title">Індивідуальні уроки</h3>
+                  <p data-i18n="s1_text">
+                     Програма складається під ваші цілі та рівень знань
+                  </p>
+               </div>
+               <div class="service-card reveal" style="transition-delay: 0.08s">
+                  <div class="service-icon">👥</div>
+                  <h3 data-i18n="s2_title">Групові заняття</h3>
+                  <p data-i18n="s2_text">
+                     Невеликі групи до 4 осіб — весело та ефективно
+                  </p>
+               </div>
+               <div class="service-card reveal" style="transition-delay: 0.16s">
+                  <div class="service-icon">📜</div>
+                  <h3 data-i18n="s3_title">Підготовка до іспитів</h3>
+                  <p data-i18n="s3_text">
+                     IELTS, TOEFL, ЗНО — інтенсивна підготовка з результатом
+                  </p>
+               </div>
+               <div class="service-card reveal" style="transition-delay: 0.24s">
+                  <div class="service-icon">🧒</div>
+                  <h3 data-i18n="s4_title">Уроки для дітей</h3>
+                  <p data-i18n="s4_text">
+                     Ігровий формат для дітей від 5 років — цікаво та ефективно
+                  </p>
+               </div>
+               <div class="service-card reveal" style="transition-delay: 0.32s">
+                  <div class="service-icon">💼</div>
+                  <h3 data-i18n="s5_title">Ділова англійська</h3>
+                  <p data-i18n="s5_text">
+                     Для кар'єри, переговорів та роботи з іноземними партнерами
+                  </p>
+               </div>
+               <div class="service-card reveal" style="transition-delay: 0.4s">
+                  <div class="service-icon">✈️</div>
+                  <h3 data-i18n="s6_title">Англійська для подорожей</h3>
+                  <p data-i18n="s6_text">
+                     Базові фрази та розмовна практика для впевненого відпочинку
+                  </p>
+               </div>
             </div>
          </div>
       </section>
 
+      <!-- PROCESS -->
+      <section id="process">
+         <div class="container">
+            <div class="reveal">
+               <div class="section-label" data-i18n="process_label">
+                  Як це працює
+               </div>
+               <h2 class="section-title" data-i18n="process_title">
+                  Процес навчання
+               </h2>
+            </div>
+            <div class="process-steps">
+               <div class="step reveal">
+                  <div class="step-num">01</div>
+                  <h4 data-i18n="step1_title">Знайомство</h4>
+                  <p data-i18n="step1_text">
+                     Безкоштовний пробний урок. Визначаємо рівень та цілі.
+                  </p>
+               </div>
+               <div class="step reveal" style="transition-delay: 0.1s">
+                  <div class="step-num">02</div>
+                  <h4 data-i18n="step2_title">Програма</h4>
+                  <p data-i18n="step2_text">
+                     Складаємо індивідуальний план навчання спеціально для вас.
+                  </p>
+               </div>
+               <div class="step reveal" style="transition-delay: 0.2s">
+                  <div class="step-num">03</div>
+                  <h4 data-i18n="step3_title">Уроки</h4>
+                  <p data-i18n="step3_text">
+                     Регулярні заняття онлайн або офлайн у зручний час.
+                  </p>
+               </div>
+               <div class="step reveal" style="transition-delay: 0.3s">
+                  <div class="step-num">04</div>
+                  <h4 data-i18n="step4_title">Результат</h4>
+                  <p data-i18n="step4_text">
+                     Відстежуємо прогрес і коригуємо програму для кращого
+                     результату.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- REVIEWS -->
       <section id="reviews">
-         <h2 data-key="nav_reviews"></h2>
-         <div class="slider-wrap">
-            <div class="slider-track" id="track">
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r1_text"></p>
-                  <div class="reviewer" data-key="r1_name"></div>
+         <div class="container">
+            <div class="reveal">
+               <div class="section-label" data-i18n="nav_reviews">Відгуки</div>
+               <h2 class="section-title" data-i18n="reviews_title">
+                  Що кажуть учні
+               </h2>
+            </div>
+            <div class="reviews-wrap reveal" style="transition-delay: 0.1s">
+               <div class="slider-track" id="sliderTrack">
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r1_text"></p>
+                     <div class="reviewer" data-i18n="r1_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r2_text"></p>
+                     <div class="reviewer" data-i18n="r2_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r3_text"></p>
+                     <div class="reviewer" data-i18n="r3_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r4_text"></p>
+                     <div class="reviewer" data-i18n="r4_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r5_text"></p>
+                     <div class="reviewer" data-i18n="r5_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r6_text"></p>
+                     <div class="reviewer" data-i18n="r6_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r7_text"></p>
+                     <div class="reviewer" data-i18n="r7_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r8_text"></p>
+                     <div class="reviewer" data-i18n="r8_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r9_text"></p>
+                     <div class="reviewer" data-i18n="r9_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r10_text"></p>
+                     <div class="reviewer" data-i18n="r10_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r4_text"></p>
+                     <div class="reviewer" data-i18n="r4_name"></div>
+                  </div>
+                  <div class="review-card">
+                     <div class="stars">★★★★★</div>
+                     <p data-i18n="r5_text"></p>
+                     <div class="reviewer" data-i18n="r5_name"></div>
+                  </div>
                </div>
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r2_text"></p>
-                  <div class="reviewer" data-key="r2_name"></div>
-               </div>
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r3_text"></p>
-                  <div class="reviewer" data-key="r3_name"></div>
-               </div>
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r4_text"></p>
-                  <div class="reviewer" data-key="r4_name"></div>
-               </div>
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r5_text"></p>
-                  <div class="reviewer" data-key="r5_name"></div>
-               </div>
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r6_text"></p>
-                  <div class="reviewer" data-key="r6_name"></div>
-               </div>
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r7_text"></p>
-                  <div class="reviewer" data-key="r7_name"></div>
-               </div>
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r8_text"></p>
-                  <div class="reviewer" data-key="r8_name"></div>
-               </div>
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r9_text"></p>
-                  <div class="reviewer" data-key="r9_name"></div>
-               </div>
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r10_text"></p>
-                  <div class="reviewer" data-key="r10_name"></div>
-               </div>
-
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r4_text"></p>
-                  <div class="reviewer" data-key="r4_name"></div>
-               </div>
-               <div class="review-card">
-                  <div class="stars">★★★★★</div>
-                  <p data-key="r5_text"></p>
-                  <div class="reviewer" data-key="r5_name"></div>
+               <div class="slider-controls">
+                  <button class="sl-btn" id="slPrev">‹</button>
+                  <div class="dots" id="slDots"></div>
+                  <button class="sl-btn" id="slNext">›</button>
                </div>
             </div>
          </div>
-         <div class="slider-controls">
-            <button class="sl-btn" id="prev">‹</button>
-            <div class="dots" id="dots"></div>
-            <button class="sl-btn" id="next">›</button>
-         </div>
       </section>
 
+      <!-- CONTACT -->
       <section id="contact">
-         <h2 data-key="contact_title"></h2>
-         <p data-key="contact_sub"></p>
-
-         <div class="contact-links">
-            <!-- viber -->
-            <a class="contact-link" href="viber://chat?number=%2B380930266041">
-               <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                     d="M12 2a10 10 0 00-8.64 15.05L2 22l5.15-1.35A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.13l-.29-.17-3.06.8.82-2.98-.2-.31A8 8 0 1112 20zm4.36-5.64c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.39.12-.13.16-.22.24-.36.08-.14.04-.27-.02-.39-.06-.12-.54-1.3-.74-1.77-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.33.98 2.5c.12.16 1.68 2.57 4.1 3.6.58.25 1.03.4 1.38.51.58.18 1.1.15 1.52.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"
-                  />
-               </svg>
-               Viber
-            </a>
-
-            <!-- telegram -->
-            <a class="contact-link" href="tg://resolve?phone=380930266041">
-               <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                     d="M9.04 15.47l-.39 5.52c.56 0 .8-.24 1.1-.54l2.62-2.5 5.43 3.98c.99.55 1.7.26 1.96-.92l3.54-16.57h.01c.31-1.45-.52-2.02-1.48-1.66L1.67 9.1c-1.42.55-1.4 1.35-.24 1.71l5.64 1.76 13.08-8.23c.62-.39 1.18-.18.71.21"
-                  />
-               </svg>
-               Telegram
-            </a>
-
-            <!-- WhatsApp -->
-            <a class="contact-link">
-               <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                     d="M12 2a10 10 0 00-8.64 15.05L2 22l5.15-1.35A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.13l-.29-.17-3.06.8.82-2.98-.2-.31A8 8 0 1112 20zm4.36-5.64c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.39.12-.13.16-.22.24-.36.08-.14.04-.27-.02-.39-.06-.12-.54-1.3-.74-1.77-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.33.98 2.5c.12.16 1.68 2.57 4.1 3.6.58.25 1.03.4 1.38.51.58.18 1.1.15 1.52.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"
-                  />
-               </svg>
-               WhatsApp
-            </a>
+         <div class="container">
+            <div class="contact-inner">
+               <div class="reveal">
+                  <div class="section-label" data-i18n="nav_contact">
+                     Контакти
+                  </div>
+                  <h2 data-i18n="contact_title">Записатися на урок</h2>
+                  <p data-i18n="contact_sub">
+                     Перше заняття — безкоштовно. Напишіть мені будь-яким
+                     зручним способом.
+                  </p>
+                  <div class="free-banner">
+                     <div class="free-banner-icon">🎁</div>
+                     <div class="free-banner-text">
+                        <strong data-i18n="free_strong"
+                           >Перший урок — безкоштовно!</strong
+                        >
+                        <p data-i18n="free_sub">
+                           Познайомимося, визначимо рівень і намітимо план.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="contact-links">
+                     <!-- Viber -->
+                     <a
+                        class="contact-link"
+                        href="viber://chat?number=%2B380930266041"
+                     >
+                        <div class="contact-link-icon viber-icon">
+                           <svg viewBox="0 0 24 24" fill="currentColor">
+                              <path
+                                 d="M12 2a10 10 0 00-8.64 15.05L2 22l5.15-1.35A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.13l-.29-.17-3.06.8.82-2.98-.2-.31A8 8 0 1112 20zm4.36-5.64c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.39.12-.13.16-.22.24-.36.08-.14.04-.27-.02-.39-.06-.12-.54-1.3-.74-1.77-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.33.98 2.5c.12.16 1.68 2.57 4.1 3.6.58.25 1.03.4 1.38.51.58.18 1.1.15 1.52.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"
+                              />
+                           </svg>
+                        </div>
+                        <div>
+                           <div class="contact-link-text">Viber</div>
+                           <!-- <div class="contact-link-sub">+380 93 026 60 41</div> -->
+                        </div>
+                     </a>
+                     <!-- Telegram -->
+                     <a
+                        class="contact-link"
+                        href="tg://resolve?phone=380930266041"
+                     >
+                        <div class="contact-link-icon tg-icon">
+                           <svg viewBox="0 0 24 24" fill="currentColor">
+                              <path
+                                 d="M9.04 15.47l-.39 5.52c.56 0 .8-.24 1.1-.54l2.62-2.5 5.43 3.98c.99.55 1.7.26 1.96-.92l3.54-16.57h.01c.31-1.45-.52-2.02-1.48-1.66L1.67 9.1c-1.42.55-1.4 1.35-.24 1.71l5.64 1.76 13.08-8.23c.62-.39 1.18-.18.71.21"
+                              />
+                           </svg>
+                        </div>
+                        <div>
+                           <div class="contact-link-text">Telegram</div>
+                           <!-- <div class="contact-link-sub">+380 93 026 60 41</div> -->
+                        </div>
+                     </a>
+                     <!-- WhatsApp -->
+                     <a class="contact-link" href="https://wa.me/380930266041">
+                        <div class="contact-link-icon wa-icon">
+                           <svg viewBox="0 0 24 24" fill="currentColor">
+                              <path
+                                 d="M12 2a10 10 0 00-8.64 15.05L2 22l5.15-1.35A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.13l-.29-.17-3.06.8.82-2.98-.2-.31A8 8 0 1112 20zm4.36-5.64c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.39.12-.13.16-.22.24-.36.08-.14.04-.27-.02-.39-.06-.12-.54-1.3-.74-1.77-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.33.98 2.5c.12.16 1.68 2.57 4.1 3.6.58.25 1.03.4 1.38.51.58.18 1.1.15 1.52.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"
+                              />
+                           </svg>
+                        </div>
+                        <div>
+                           <div class="contact-link-text">WhatsApp</div>
+                           <!-- <div class="contact-link-sub">+380 93 026 60 41</div> -->
+                        </div>
+                     </a>
+                     <!-- TikTok -->
+                     <a
+                        class="contact-link"
+                        href="#"
+                        onclick="event.preventDefault()"
+                     >
+                        <div
+                           class="contact-link-icon tt-icon"
+                           style="font-size: 22px"
+                        >
+                           🎵
+                        </div>
+                        <div>
+                           <div class="contact-link-text">TikTok</div>
+                           <div class="contact-link-sub" data-i18n="tiktok_sub">
+                              Скоро буде — в розробці 🚧
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <!-- Right side: map / motivation block -->
+               <div class="reveal" style="transition-delay: 0.15s">
+                  <div
+                     style="
+                        background: var(--card);
+                        border: 1px solid var(--border);
+                        border-radius: 24px;
+                        padding: 40px 36px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 28px;
+                     "
+                  >
+                     <div
+                        style="
+                           font-family: &quot;Cormorant Garamond&quot;, serif;
+                           font-size: 28px;
+                           font-weight: 700;
+                           line-height: 1.2;
+                        "
+                        data-i18n="cta_heading"
+                     >
+                        Готові почати вивчати англійську?
+                     </div>
+                     <p
+                        style="
+                           color: var(--muted);
+                           font-size: 15px;
+                           line-height: 1.75;
+                        "
+                        data-i18n="cta_text"
+                     >
+                        Напишіть мені — і вже сьогодні ми домовимося про
+                        безкоштовний перший урок. Разом ми досягнемо вашої мети!
+                     </p>
+                     <div
+                        style="display: flex; flex-direction: column; gap: 14px"
+                     >
+                        <div
+                           style="display: flex; align-items: center; gap: 12px"
+                        >
+                           <span style="font-size: 20px">✅</span
+                           ><span
+                              style="font-size: 14px; color: var(--muted)"
+                              data-i18n="adv1"
+                              >Перший урок — безкоштовно</span
+                           >
+                        </div>
+                        <div
+                           style="display: flex; align-items: center; gap: 12px"
+                        >
+                           <span style="font-size: 20px">✅</span
+                           ><span
+                              style="font-size: 14px; color: var(--muted)"
+                              data-i18n="adv2"
+                              >Індивідуальний підхід до кожного</span
+                           >
+                        </div>
+                        <div
+                           style="display: flex; align-items: center; gap: 12px"
+                        >
+                           <span style="font-size: 20px">✅</span
+                           ><span
+                              style="font-size: 14px; color: var(--muted)"
+                              data-i18n="adv3"
+                              >Онлайн у будь-якому місті</span
+                           >
+                        </div>
+                        <div
+                           style="display: flex; align-items: center; gap: 12px"
+                        >
+                           <span style="font-size: 20px">✅</span
+                           ><span
+                              style="font-size: 14px; color: var(--muted)"
+                              data-i18n="adv4"
+                              >Зручний для вас графік</span
+                           >
+                        </div>
+                     </div>
+                     <a
+                        href="viber://chat?number=%2B380930266041"
+                        class="btn btn-primary"
+                        style="text-align: center; justify-content: center"
+                        data-i18n="hero_btn"
+                        >📚 Записатися на урок</a
+                     >
+                  </div>
+               </div>
+            </div>
          </div>
       </section>
 
-      <footer><span data-key="footer"></span></footer>
+      <!-- FOOTER -->
+      <footer>
+         <div class="container">
+            <div class="footer-inner">
+               <a href="#hero" class="footer-logo">Elena ✦ English</a>
+               <p data-i18n="footer_tagline">Роблю англійську доступною ❤️</p>
+               <p data-i18n="footer_copy">
+                  © 2026 Елена · Репетитор англійської
+               </p>
+            </div>
+         </div>
+      </footer>
+
       <button class="scroll-top" id="scrollTop">↑</button>
 
       <script src="script.js"></script>

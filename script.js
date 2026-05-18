@@ -1,23 +1,43 @@
+// ─── i18n ───────────────────────────────────────────────────────────────────
 const i18n = {
    uk: {
-      nav_home: "Головна",
       nav_about: "Про мене",
       nav_services: "Послуги",
       nav_reviews: "Відгуки",
       nav_contact: "Контакти",
       badge: "Репетитор англійської мови",
-      hero_title: "Вчимо англійську легко\nі з задоволенням",
+      hero_line1: "Вчимо англійську",
+      hero_line2: "легко і з",
+      hero_line3: "задоволенням",
       hero_sub:
          "Онлайн та офлайн уроки для дітей і дорослих. Індивідуальний підхід до кожного учня.",
-      hero_btn: "Записатися на урок",
+      hero_btn: "📚 Записатися на урок",
+      hero_btn2: "Послуги",
+      tag1: "10+ років досвіду ✨",
+      tag2: "IELTS / TOEFL 📜",
+      tag3: "Онлайн & офлайн 💻",
+      t1: "Індивідуальні уроки",
+      t2: "Групові заняття",
+      t3: "Підготовка до IELTS",
+      t4: "Діти від 5 років",
+      t5: "Ділова англійська",
+      t6: "Перший урок безкоштовно",
+      t7: "Онлайн & офлайн",
+      t8: "10+ років досвіду",
+      stat1: "Років досвіду",
+      stat2: "Учнів навчено",
+      stat3: "% задоволених учнів",
+      stat4: "Перший урок — безкоштовно",
+      about_title: "Знайомтесь — Елена",
       about_text_1:
          "Мене звати Елена, я викладач англійської мови з досвідом понад 10 років.",
       about_text_2:
-         "За цей час я допомогла багатьом учням покращити знання англійської, підготуватися до іспитів та подолати мовний бар’єр.",
+         "За цей час я допомогла багатьом учням покращити знання англійської, підготуватися до іспитів та подолати мовний бар'єр.",
       about_text_3:
          "Працюю з дітьми, школярами, студентами та дорослими, підбираючи індивідуальну програму навчання під кожного учня.",
       about_text_4:
          "Моє головне завдання — зробити англійську зрозумілою, доступною та корисною у реальному житті.",
+      services_title: "Що я пропоную",
       s1_title: "Індивідуальні уроки",
       s1_text: "Програма складається під ваші цілі та рівень знань",
       s2_title: "Групові заняття",
@@ -30,6 +50,18 @@ const i18n = {
       s5_text: "Для кар'єри, переговорів та роботи з іноземними партнерами",
       s6_title: "Англійська для подорожей",
       s6_text: "Базові фрази та розмовна практика для впевненого відпочинку",
+      process_label: "Як це працює",
+      process_title: "Процес навчання",
+      step1_title: "Знайомство",
+      step1_text: "Безкоштовний пробний урок. Визначаємо рівень та цілі.",
+      step2_title: "Програма",
+      step2_text: "Складаємо індивідуальний план навчання спеціально для вас.",
+      step3_title: "Уроки",
+      step3_text: "Регулярні заняття онлайн або офлайн у зручний час.",
+      step4_title: "Результат",
+      step4_text:
+         "Відстежуємо прогрес і коригуємо програму для кращого результату.",
+      reviews_title: "Що кажуть учні",
       r1_text:
          "Займаюся вже 3 місяці — прогрес помітний! Викладач пояснює зрозуміло і терпляче.",
       r1_name: "Анна, 28 років",
@@ -59,22 +91,52 @@ const i18n = {
       r10_text:
          "Найкращий викладач якого я мав. Пояснює складне просто і з гумором.",
       r10_name: "Максим, 22 роки",
-      contact_title: "Запишіться на урок",
+      contact_title: "Записатися на урок",
       contact_sub:
          "Перше заняття — безкоштовно. Напишіть мені будь-яким зручним способом.",
-      footer: "© 2026 Олена · Репетитор англійської",
+      free_strong: "Перший урок — безкоштовно!",
+      free_sub: "Познайомимося, визначимо рівень і намітимо план.",
+      tiktok_sub: "Скоро буде — в розробці 🚧",
+      cta_heading: "Готові почати вивчати англійську?",
+      cta_text:
+         "Напишіть мені — і вже сьогодні ми домовимося про безкоштовний перший урок. Разом ми досягнемо вашої мети!",
+      adv1: "Перший урок — безкоштовно",
+      adv2: "Індивідуальний підхід до кожного",
+      adv3: "Онлайн у будь-якому місті",
+      adv4: "Зручний для вас графік",
+      footer_tagline: "Роблю англійську доступною ❤️",
+      footer_copy: "© 2026 Елена · Репетитор англійської",
+      lang_label: "УКР ▾",
    },
    ru: {
-      nav_home: "Главная",
       nav_about: "Обо мне",
       nav_services: "Услуги",
       nav_reviews: "Отзывы",
       nav_contact: "Контакты",
       badge: "Репетитор английского языка",
-      hero_title: "Учим английский легко\nи с удовольствием",
+      hero_line1: "Учим английский",
+      hero_line2: "легко и с",
+      hero_line3: "удовольствием",
       hero_sub:
          "Онлайн и офлайн уроки для детей и взрослых. Индивидуальный подход к каждому ученику.",
-      hero_btn: "Записаться на урок",
+      hero_btn: "📚 Записаться на урок",
+      hero_btn2: "Услуги",
+      tag1: "10+ лет опыта ✨",
+      tag2: "IELTS / TOEFL 📜",
+      tag3: "Онлайн & офлайн 💻",
+      t1: "Индивидуальные уроки",
+      t2: "Групповые занятия",
+      t3: "Подготовка к IELTS",
+      t4: "Дети от 5 лет",
+      t5: "Деловой английский",
+      t6: "Первый урок бесплатно",
+      t7: "Онлайн & офлайн",
+      t8: "10+ лет опыта",
+      stat1: "Лет опыта",
+      stat2: "Учеников обучено",
+      stat3: "% довольных учеников",
+      stat4: "Первый урок — бесплатно",
+      about_title: "Знакомьтесь — Елена",
       about_text_1:
          "Меня зовут Елена, я преподаватель английского языка с опытом более 10 лет.",
       about_text_2:
@@ -83,6 +145,7 @@ const i18n = {
          "Работаю с детьми, школьниками, студентами и взрослыми, подбирая индивидуальную программу обучения.",
       about_text_4:
          "Моя главная задача — сделать английский понятным и полезным в реальной жизни.",
+      services_title: "Что я предлагаю",
       s1_title: "Индивидуальные уроки",
       s1_text: "Программа составляется под ваши цели и уровень знаний",
       s2_title: "Групповые занятия",
@@ -95,6 +158,18 @@ const i18n = {
       s5_text: "Для карьеры, переговоров и работы с иностранными партнёрами",
       s6_title: "Английский для путешествий",
       s6_text: "Базовые фразы и разговорная практика для уверенного отдыха",
+      process_label: "Как это работает",
+      process_title: "Процесс обучения",
+      step1_title: "Знакомство",
+      step1_text: "Бесплатный пробный урок. Определяем уровень и цели.",
+      step2_title: "Программа",
+      step2_text: "Составляем индивидуальный план обучения специально для вас.",
+      step3_title: "Уроки",
+      step3_text: "Регулярные занятия онлайн или офлайн в удобное время.",
+      step4_title: "Результат",
+      step4_text:
+         "Отслеживаем прогресс и корректируем программу для лучшего результата.",
+      reviews_title: "Что говорят ученики",
       r1_text:
          "Занимаюсь уже 3 месяца — прогресс заметен! Преподаватель объясняет понятно и терпеливо.",
       r1_name: "Анна, 28 лет",
@@ -125,22 +200,52 @@ const i18n = {
       r10_text:
          "Лучший преподаватель которого я встречал. Объясняет сложное просто и с юмором.",
       r10_name: "Максим, 22 года",
-      contact_title: "Запишитесь на урок",
+      contact_title: "Записаться на урок",
       contact_sub:
          "Первое занятие — бесплатно. Напишите мне любым удобным способом.",
-      footer: "© 2026 Елена · Репетитор английского",
+      free_strong: "Первый урок — бесплатно!",
+      free_sub: "Познакомимся, определим уровень и наметим план.",
+      tiktok_sub: "Скоро будет — в разработке 🚧",
+      cta_heading: "Готовы начать учить английский?",
+      cta_text:
+         "Напишите мне — и уже сегодня мы договоримся о бесплатном первом уроке. Вместе мы достигнем вашей цели!",
+      adv1: "Первый урок — бесплатно",
+      adv2: "Индивидуальный подход к каждому",
+      adv3: "Онлайн в любом городе",
+      adv4: "Удобный для вас график",
+      footer_tagline: "Делаю английский доступным ❤️",
+      footer_copy: "© 2026 Елена · Репетитор английского",
+      lang_label: "РУС ▾",
    },
    en: {
-      nav_home: "Home",
       nav_about: "About",
       nav_services: "Services",
       nav_reviews: "Reviews",
       nav_contact: "Contact",
       badge: "English Language Tutor",
-      hero_title: "Learn English easily\nand with pleasure",
+      hero_line1: "Learn English",
+      hero_line2: "easily and with",
+      hero_line3: "pleasure",
       hero_sub:
          "Online and offline lessons for children and adults. Individual approach to every student.",
-      hero_btn: "Book a lesson",
+      hero_btn: "📚 Book a lesson",
+      hero_btn2: "Services",
+      tag1: "10+ years experience ✨",
+      tag2: "IELTS / TOEFL 📜",
+      tag3: "Online & offline 💻",
+      t1: "Individual lessons",
+      t2: "Group classes",
+      t3: "IELTS preparation",
+      t4: "Kids from age 5",
+      t5: "Business English",
+      t6: "First lesson free",
+      t7: "Online & offline",
+      t8: "10+ years experience",
+      stat1: "Years of experience",
+      stat2: "Students taught",
+      stat3: "% satisfied students",
+      stat4: "First lesson is free",
+      about_title: "Meet Elena",
       about_text_1:
          "My name is Elena, and I am an English teacher with over 10 years of experience.",
       about_text_2:
@@ -149,6 +254,7 @@ const i18n = {
          "I work with children, students, and adults, creating personalized learning programs for each learner.",
       about_text_4:
          "My main goal is to make English clear, practical, and useful in real life.",
+      services_title: "What I offer",
       s1_title: "Individual lessons",
       s1_text: "Program tailored to your goals and knowledge level",
       s2_title: "Group classes",
@@ -161,6 +267,18 @@ const i18n = {
       s5_text: "For career growth, negotiations and work with foreign partners",
       s6_title: "English for travel",
       s6_text: "Basic phrases and conversation practice for confident travel",
+      process_label: "How it works",
+      process_title: "Learning process",
+      step1_title: "First meeting",
+      step1_text: "Free trial lesson. We assess your level and set goals.",
+      step2_title: "Programme",
+      step2_text: "We create a personalised learning plan just for you.",
+      step3_title: "Lessons",
+      step3_text: "Regular online or offline classes at a time that suits you.",
+      step4_title: "Results",
+      step4_text:
+         "We track progress and adjust the programme for best results.",
+      reviews_title: "What students say",
       r1_text:
          "I've been studying for 3 months — the progress is visible! The teacher explains clearly and patiently.",
       r1_name: "Anna, 28",
@@ -193,188 +311,238 @@ const i18n = {
       r10_name: "Maxim, 22",
       contact_title: "Book a lesson",
       contact_sub: "First lesson is free. Write to me in any convenient way.",
-      footer: "© 2026 Elena · English Tutor",
+      free_strong: "First lesson is FREE!",
+      free_sub: "We'll meet, assess your level, and make a plan.",
+      tiktok_sub: "Coming soon — in development 🚧",
+      cta_heading: "Ready to start learning English?",
+      cta_text:
+         "Write to me — and today we'll arrange your free first lesson. Together we'll reach your goal!",
+      adv1: "First lesson is free",
+      adv2: "Individual approach to everyone",
+      adv3: "Online from any city",
+      adv4: "Schedule that suits you",
+      footer_tagline: "Making English accessible ❤️",
+      footer_copy: "© 2026 Elena · English Tutor",
+      lang_label: "ENG ▾",
    },
 };
 
-function applyLang(l) {
-   const t = i18n[l];
-   document.querySelectorAll("[data-key]").forEach((el) => {
-      const k = el.dataset.key;
-      if (t[k] !== undefined)
-         el.innerHTML = k === "hero_title" ? t[k].replace("\n", "<br>") : t[k];
+let currentLang = "uk";
+
+function applyLang(lang) {
+   currentLang = lang;
+   const t = i18n[lang];
+   document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const k = el.dataset.i18n;
+      if (t[k] !== undefined) el.textContent = t[k];
    });
+   // lang button label
+   document.getElementById("langMainBtn").textContent = t.lang_label;
+   // active states
    document
-      .querySelectorAll(".lang-btn")
-      .forEach((b) => b.classList.toggle("active", b.dataset.lang === l));
+      .querySelectorAll(".lang-opt")
+      .forEach((b) => b.classList.toggle("active", b.dataset.lang === lang));
+   document
+      .querySelectorAll(".mobile-lang-btn")
+      .forEach((b) => b.classList.toggle("active", b.dataset.lang === lang));
+   // retrigger slider to update text
+   sliderRender();
 }
 
-document
-   .querySelectorAll(".lang-btn")
-   .forEach((b) => (b.onclick = () => applyLang(b.dataset.lang)));
-
-document.querySelectorAll("[data-section]").forEach((a) => {
-   a.onclick = () => {
-      const sec = document.getElementById(a.dataset.section);
-      if (sec) sec.scrollIntoView({ behavior: "smooth" });
-      const s = a.dataset.section;
-      document
-         .querySelectorAll("[data-section]")
-         .forEach((x) => x.classList.toggle("active", x.dataset.section === s));
-      document.getElementById("mobile-menu").classList.remove("open");
-   };
+// ─── CURSOR ─────────────────────────────────────────────────────────────────
+const cursor = document.getElementById("cursor");
+const ring = document.getElementById("cursorRing");
+let mx = 0,
+   my = 0,
+   rx = 0,
+   ry = 0;
+document.addEventListener("mousemove", (e) => {
+   mx = e.clientX;
+   my = e.clientY;
+   cursor.style.left = mx + "px";
+   cursor.style.top = my + "px";
 });
+(function animRing() {
+   rx += (mx - rx) * 0.14;
+   ry += (my - ry) * 0.14;
+   ring.style.left = rx + "px";
+   ring.style.top = ry + "px";
+   requestAnimationFrame(animRing);
+})();
+document
+   .querySelectorAll("a,button,.service-card,.review-card,.step")
+   .forEach((el) => {
+      el.addEventListener("mouseenter", () => {
+         cursor.classList.add("hover");
+         ring.classList.add("hover");
+      });
+      el.addEventListener("mouseleave", () => {
+         cursor.classList.remove("hover");
+         ring.classList.remove("hover");
+      });
+   });
 
-const burger = document.getElementById("burger");
-const menu = document.getElementById("mobile-menu");
-
-function syncBurger() {
-   const isOpen = menu.classList.contains("open");
-
-   burger.classList.toggle("open", isOpen);
-   burger.innerText = isOpen ? "✕" : "☰";
-}
-
-// клик по бургеру
-burger.onclick = () => {
-   menu.classList.toggle("open");
-   syncBurger();
+// ─── THEME ───────────────────────────────────────────────────────────────────
+const themeBtn = document.getElementById("themeToggle");
+let isDark = true;
+document.documentElement.setAttribute("data-theme", "dark");
+themeBtn.onclick = () => {
+   isDark = !isDark;
+   document.documentElement.setAttribute(
+      "data-theme",
+      isDark ? "dark" : "light",
+   );
+   themeBtn.textContent = isDark ? "🌙" : "☀️";
 };
 
-// клик по пункту меню (у тебя уже есть обработка)
-document.querySelectorAll("[data-section]").forEach((a) => {
-   a.addEventListener("click", () => {
-      menu.classList.remove("open");
-      syncBurger();
+// ─── LANG DROPDOWN ───────────────────────────────────────────────────────────
+const langMainBtn = document.getElementById("langMainBtn");
+const langDropdown = document.getElementById("langDropdown");
+langMainBtn.onclick = (e) => {
+   e.stopPropagation();
+   langDropdown.classList.toggle("open");
+};
+document.querySelectorAll(".lang-opt").forEach((b) => {
+   b.onclick = () => {
+      applyLang(b.dataset.lang);
+      langDropdown.classList.remove("open");
+   };
+});
+document.addEventListener("click", () => langDropdown.classList.remove("open"));
+
+// ─── MOBILE NAV ──────────────────────────────────────────────────────────────
+const hamburger = document.getElementById("hamburger");
+const mobileNav = document.getElementById("mobileNav");
+function toggleMobile() {
+   mobileNav.classList.toggle("open");
+   hamburger.classList.toggle("open");
+}
+function closeMobile() {
+   mobileNav.classList.remove("open");
+   hamburger.classList.remove("open");
+}
+document.querySelectorAll(".mobile-lang-btn").forEach((b) => {
+   b.onclick = () => applyLang(b.dataset.lang);
+});
+
+// ─── SMOOTH SCROLL NAV ───────────────────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
+   a.addEventListener("click", (e) => {
+      const target = document.querySelector(a.getAttribute("href"));
+      if (target) {
+         e.preventDefault();
+         target.scrollIntoView({ behavior: "smooth" });
+         closeMobile();
+      }
    });
 });
 
-// если закрываешь где-то ещё вне клика
-document.addEventListener("click", (e) => {
-   if (
-      !document.getElementById("mobile-menu").contains(e.target) &&
-      !burger.contains(e.target)
-   ) {
-      menu.classList.remove("open");
-      syncBurger();
-   }
-});
-
-// стартовое состояние
-syncBurger();
-// };
-// ------------------
-
-const scrollBtn = document.getElementById("scrollTop");
-window.addEventListener("scroll", () =>
-   scrollBtn.classList.toggle("visible", window.scrollY > 300),
+// ─── REVEAL ON SCROLL ────────────────────────────────────────────────────────
+const revealObs = new IntersectionObserver(
+   (entries) => {
+      entries.forEach((e) => {
+         if (e.isIntersecting) e.target.classList.add("visible");
+      });
+   },
+   { threshold: 0.12 },
 );
-scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+document.querySelectorAll(".reveal").forEach((el) => revealObs.observe(el));
 
-// Slider start
-const track = document.getElementById("track");
-const cards = Array.from(track.querySelectorAll(".review-card"));
-let cur = 0;
-const perPage = () => (window.innerWidth <= 480 ? 1 : 4);
-const getTotal = () => Math.ceil(cards.length / perPage());
+// ─── COUNT UP ─────────────────────────────────────────────────────────────────
+function countUp(el) {
+   const target = parseInt(el.dataset.count);
+   let cur = 0;
+   const step = Math.max(1, target / 60);
+   const t = setInterval(() => {
+      cur += step;
+      if (cur >= target) {
+         cur = target;
+         clearInterval(t);
+      }
+      const suffix = target === 100 ? "%" : target === 1 ? " 🎁" : "+";
+      el.textContent =
+         Math.floor(cur) + (target === 10 || target === 200 ? "+" : suffix);
+   }, 25);
+}
+const statObs = new IntersectionObserver(
+   (entries) => {
+      entries.forEach((e) => {
+         if (e.isIntersecting) {
+            countUp(e.target);
+            statObs.unobserve(e.target);
+         }
+      });
+   },
+   { threshold: 0.5 },
+);
+document.querySelectorAll(".stat-num").forEach((el) => statObs.observe(el));
 
-function slide() {
+// ─── SLIDER ───────────────────────────────────────────────────────────────────
+const track = document.getElementById("sliderTrack");
+const allCards = Array.from(track.querySelectorAll(".review-card"));
+let slPage = 0;
+const perPage = () =>
+   window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : 4;
+const totalPages = () => Math.ceil(allCards.length / perPage());
+
+function sliderRender() {
    const pp = perPage();
    track.style.opacity = "0";
    setTimeout(() => {
-      cards.forEach((c, i) => {
-         c.style.display = i >= cur && i < cur + pp ? "" : "none";
+      allCards.forEach((c, i) => {
+         c.style.display =
+            i >= slPage * pp && i < (slPage + 1) * pp ? "" : "none";
       });
       track.style.opacity = "1";
-      const total = getTotal();
-      const page = Math.floor(cur / pp);
-      const d = document.getElementById("dots");
-      d.innerHTML = "";
-      for (let i = 0; i < total; i++) {
-         const dot = document.createElement("div");
-         dot.className = "dot" + (i === page ? " active" : "");
-         dot.onclick = () => {
-            cur = i * pp;
-            slide();
+      const dots = document.getElementById("slDots");
+      dots.innerHTML = "";
+      for (let i = 0; i < totalPages(); i++) {
+         const d = document.createElement("div");
+         d.className = "dot" + (i === slPage ? " active" : "");
+         d.onclick = () => {
+            slPage = i;
+            sliderRender();
          };
-         d.appendChild(dot);
+         dots.appendChild(d);
       }
-   }, 150);
+   }, 160);
 }
-
-// Стрелки — при упоре начинается заново
-document.getElementById("prev").onclick = () => {
-   const pp = perPage();
-   cur = cur - pp < 0 ? (getTotal() - 1) * pp : cur - pp;
-   slide();
+document.getElementById("slPrev").onclick = () => {
+   slPage = slPage <= 0 ? totalPages() - 1 : slPage - 1;
+   sliderRender();
 };
-document.getElementById("next").onclick = () => {
-   const pp = perPage();
-   cur = cur + pp >= cards.length ? 0 : cur + pp;
-   slide();
+document.getElementById("slNext").onclick = () => {
+   slPage = slPage >= totalPages() - 1 ? 0 : slPage + 1;
+   sliderRender();
 };
 
-window.addEventListener("resize", () => {
-   cur = 0;
-   slide();
-});
-
-// Свайп пальцем на телефоне
-let touchStartX = 0;
+let tStart = 0;
 track.addEventListener("touchstart", (e) => {
-   touchStartX = e.touches[0].clientX;
+   tStart = e.touches[0].clientX;
 });
 track.addEventListener("touchend", (e) => {
-   const diff = touchStartX - e.changedTouches[0].clientX;
-   if (Math.abs(diff) > 50) {
-      const pp = perPage();
-      if (diff > 0) {
-         cur = cur + pp >= cards.length ? 0 : cur + pp;
+   const d = tStart - e.changedTouches[0].clientX;
+   if (Math.abs(d) > 50) {
+      if (d > 0) {
+         slPage = slPage >= totalPages() - 1 ? 0 : slPage + 1;
       } else {
-         cur = cur - pp < 0 ? (getTotal() - 1) * pp : cur - pp;
+         slPage = slPage <= 0 ? totalPages() - 1 : slPage - 1;
       }
-      slide();
+      sliderRender();
    }
 });
+window.addEventListener("resize", () => {
+   slPage = 0;
+   sliderRender();
+});
 
-// Плавность opacity
+// ─── SCROLL TOP ──────────────────────────────────────────────────────────────
+const scrollBtn = document.getElementById("scrollTop");
+window.addEventListener("scroll", () =>
+   scrollBtn.classList.toggle("visible", window.scrollY > 320),
+);
+scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
 track.style.transition = "opacity 0.2s ease";
-
-slide();
-//  Slider end
 applyLang("uk");
-
-const langMain = document.getElementById("langMain");
-const langDropdown = document.getElementById("langDropdown");
-
-function setLang(lang) {
-   applyLang(lang);
-
-   // меняем текст кнопки
-   if (lang === "uk") langMain.innerText = "УКР ▼";
-   if (lang === "ru") langMain.innerText = "РУС ▼";
-   if (lang === "en") langMain.innerText = "ENG ▼";
-}
-
-// открыть/закрыть меню
-langMain.onclick = () => {
-   langDropdown.classList.toggle("show");
-};
-
-// выбор языка
-document.querySelectorAll(".lang-item").forEach((btn) => {
-   btn.onclick = () => {
-      setLang(btn.dataset.lang); // применяем язык
-      langDropdown.classList.remove("show"); // закрываем меню
-   };
-});
-
-// закрытие вне клика
-document.addEventListener("click", (e) => {
-   if (!document.getElementById("langSwitch").contains(e.target)) {
-      langDropdown.classList.remove("show");
-   }
-});
-
-// старт
-setLang("uk");
