@@ -96,7 +96,6 @@ const i18n = {
          "Перше заняття — безкоштовно. Напишіть мені будь-яким зручним способом.",
       free_strong: "Перший урок — безкоштовно!",
       free_sub: "Познайомимося, визначимо рівень і намітимо план.",
-      tiktok_sub: "Скоро буде — в розробці 🚧",
       cta_heading: "Готові почати вивчати англійську?",
       cta_text:
          "Напишіть мені — і вже сьогодні ми домовимося про безкоштовний перший урок. Разом ми досягнемо вашої мети!",
@@ -205,7 +204,6 @@ const i18n = {
          "Первое занятие — бесплатно. Напишите мне любым удобным способом.",
       free_strong: "Первый урок — бесплатно!",
       free_sub: "Познакомимся, определим уровень и наметим план.",
-      tiktok_sub: "Скоро будет — в разработке 🚧",
       cta_heading: "Готовы начать учить английский?",
       cta_text:
          "Напишите мне — и уже сегодня мы договоримся о бесплатном первом уроке. Вместе мы достигнем вашей цели!",
@@ -313,7 +311,6 @@ const i18n = {
       contact_sub: "First lesson is free. Write to me in any convenient way.",
       free_strong: "First lesson is FREE!",
       free_sub: "We'll meet, assess your level, and make a plan.",
-      tiktok_sub: "Coming soon — in development 🚧",
       cta_heading: "Ready to start learning English?",
       cta_text:
          "Write to me — and today we'll arrange your free first lesson. Together we'll reach your goal!",
